@@ -15,7 +15,7 @@ Billy Bichon : https://fr.linkedin.com/in/billybichon
 
 ## License
 
-See LICENSE.
+See [LICENSE](http://mit-license.org).
 
 ## Todo
 
