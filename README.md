@@ -1,7 +1,7 @@
 [![Epitech](https://img.shields.io/badge/Epitech-EIP-blue.svg
 )](http://www.epitech.eu/epitech-innovative-projects.aspx)
-[![AndroidLibs](https://img.shields.io/badge/AndroidLibs-Android Studio-brightgreen.svg?style=flat
-)](https://android-libs.com/lib/android-studio?utm_source=github-badge&utm_medium=github-badge&utm_campaign=github-badge)
+[![Platform](https://img.shields.io/badge/platform-Android-brightgreen.svg?style=flat
+)](http://developer.android.com/index.html)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
 
@@ -11,7 +11,7 @@ This is the repository for the Android Omega-Splicer application. Omega-Splicer 
 
 ## Contact
 
-https://fr.linkedin.com/in/billybichon
+Billy Bichon : https://fr.linkedin.com/in/billybichon
 
 ## License
 
