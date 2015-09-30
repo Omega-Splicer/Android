@@ -1,7 +1,7 @@
 [![Epitech](https://img.shields.io/badge/Epitech-EIP-blue.svg
 )](http://www.epitech.eu/epitech-innovative-projects.aspx)
 [![Platform](https://img.shields.io/badge/platform-Android-brightgreen.svg?style=flat
-)](http://developer.android.com/index.html)
+)](http://developer.android.com/index.html){:target="_blank"}
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
 )](http://mit-license.org)
 
