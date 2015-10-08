@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Declare the font used for the actual Button -->
+    <declare-styleable name="CustomFontButton">
+        <attr name="customFont" format="string" />
+    </declare-styleable>
+    
+    <declare-styleable name="JoystickLayout">
+        <attr name="joystickSrc" format="reference"/>
+        <attr name="offset" format="integer" />
+        <attr name="minDistance" format="integer" />
+    </declare-styleable>
+
+</resources>

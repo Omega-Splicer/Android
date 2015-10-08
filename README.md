@@ -3,7 +3,7 @@
 [![Platform](https://img.shields.io/badge/platform-Android-brightgreen.svg?style=flat
 )](http://developer.android.com/index.html)
 [![License](http://img.shields.io/badge/license-MIT-lightgrey.svg?style=flat
-)](http://mit-license.org)
+)](http://blog.yjl.im/2014/06/beer-ware-license-revision-42.html)
 
 # Omega-Splicer for Android
 
@@ -15,7 +15,7 @@ Billy Bichon : https://fr.linkedin.com/in/billybichon
 
 ## License
 
-See [LICENSE](http://mit-license.org).
+See [LICENSE](http://blog.yjl.im/2014/06/beer-ware-license-revision-42.html).
 
 ## Todo
 

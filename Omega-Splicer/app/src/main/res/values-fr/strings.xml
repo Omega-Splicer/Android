@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Omega-Splicer</string>
+    <string name="fly">Voler</string>
+    <string name="pair">Pairer</string>
+    <string name="setting">Paramètres</string>
+    <string name="control_buttons">Boutons</string>
+    <string name="control_gyroscope">Gyroscope</string>
+    <string name="setting_controls">Contrôles</string>
+    <string name="setting_speed_unit">Unité de vitesse</string>
+    <string name="default_speed_unit_value_shared_preference">kilometerPerHour</string>
+</resources>
