@@ -9,4 +9,13 @@
     <string name="setting_controls">Controls</string>
     <string name="setting_speed_unit">Speed\'s unit</string>
     <string name="default_speed_unit_value_shared_preference">milesPerHour</string>
+    <string name="fly_activity_battery_level_description">Level of the plane\'s battery</string>
+    <string name="fly_activity_bluetooth_signal_description">Bluetooth signal strength</string>
+    <string name="fly_activity_setting_description">Open the settings</string>
+    <string name="fly_activity_share_description">Share the fly\'s data</string>
+    <string name="gyroscope_control_shared_preference">gyroscope</string>
+    <string name="km_speed_unit_shared_preference">kilometerPerHour</string>
+    <string name="mph_speed_unit_shared_preference">milesPerHour</string>
+    <string name="ms_speed_unit_shared_preference">meterPerSecond</string>
+    <string name="button_control_shared_preference"></string>
 </resources>

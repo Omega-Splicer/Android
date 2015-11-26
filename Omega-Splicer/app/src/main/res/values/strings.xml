@@ -24,7 +24,7 @@
     <!-- shared preference values -->
     <string name="control_shared_preference" translatable="false">controlSettingPreference</string>
     <string name="default_control_value_shared_preference" translatable="false">buttons</string>
-    <string name="button_control_shared_preference">buttons</string>
+    <string name="button_control_shared_preference" translatable="false">buttons</string>
     <string name="gyroscope_control_shared_preference">gyroscope</string>
     <string name="speed_unit_shared_preference" translatable="false">speedUnitSettingPreference</string>
     <string name="default_speed_unit_value_shared_preference">milesPerHour</string>
@@ -36,5 +36,13 @@
     <!-- End OF SETTING PAGE -->
     <!-- ******************* -->
 
+    <!-- ******** -->
+    <!-- FLY PAGE -->
+    <!-- ******** -->
+    
+    <string name="fly_activity_battery_level_description">Level of the plane\'s battery</string>
+    <string name="fly_activity_setting_description">Open the settings</string>
+    <string name="fly_activity_bluetooth_signal_description">Bluetooth strength signal</string>
+    <string name="fly_activity_share_description">Share the fly\'s data</string>
 
 </resources>

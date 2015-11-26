@@ -11,9 +11,11 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/cloud"
+            android:src="@drawable/ic_keyboard_backspace_black_36dp"
+            android:scaleType="center"
+            android:background="@drawable/cloud"
             android:transitionName="pair_transition_cloud"
-            android:id="@+id/pair_activity_big_cloud"/>
+            android:id="@+id/pair_activity_back_cloud"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -21,6 +23,7 @@
             android:text="@string/pair"
             android:textAllCaps="true"
             android:textSize="50sp"
+            android:id="@+id/pair_activity_title"
             android:transitionName="pair_transition_text"
             android:layout_gravity="center_vertical"/>
 

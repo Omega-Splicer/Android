@@ -9,4 +9,12 @@
     <string name="setting_controls">Contrôles</string>
     <string name="setting_speed_unit">Unité de vitesse</string>
     <string name="default_speed_unit_value_shared_preference">kilometerPerHour</string>
+    <string name="fly_activity_battery_level_description">Niveau de batterie de l\'avion</string>
+    <string name="fly_activity_bluetooth_signal_description">Puissance du signal bluetooth</string>
+    <string name="fly_activity_setting_description">Ouvre les paramètres</string>
+    <string name="fly_activity_share_description">Partager les données de vol</string>
+    <string name="gyroscope_control_shared_preference">gyroscope</string>
+    <string name="km_speed_unit_shared_preference">Kilomètres par heure</string>
+    <string name="mph_speed_unit_shared_preference">miles par heure</string>
+    <string name="ms_speed_unit_shared_preference">mètres par heure</string>
 </resources>

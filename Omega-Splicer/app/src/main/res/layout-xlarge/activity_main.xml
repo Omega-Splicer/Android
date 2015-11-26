@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true">
+
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:src="@drawable/omega_splicer_logo"
+        android:layout_centerHorizontal="true" />
+    
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_activity_fly_button"
+        android:text="@string/fly"
+        android:textSize="75sp"
+        android:layout_centerInParent="true"
+        android:background="@color/light_gray"
+        android:textAllCaps="false"/>
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_activity_pair_button"
+        android:text="@string/pair"
+        android:textSize="75sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/light_gray"
+        android:textAllCaps="false"
+        android:layout_below="@+id/main_activity_fly_button"/>
+
+    <Button
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_activity_setting_button"
+        android:text="@string/setting"
+        android:textSize="75sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:background="@color/light_gray"
+        android:textAllCaps="false"
+        android:layout_below="@+id/main_activity_pair_button"/>
+
+
+
+
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:id="@+id/main_activity_pair_layout"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:layout_marginLeft="25dp"-->
+        <!--android:layout_marginStart="25dp"-->
+        <!--android:background="@drawable/cloud"-->
+        <!--android:transitionName="pair_transition_cloud">-->
+
+        <!--<com.epitech.billy.omega_splicer.Utils.CustomFontTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/pair"-->
+            <!--android:textSize="25sp"-->
+            <!--android:id="@+id/main_activity_pair_text"-->
+            <!--android:transitionName="pair_transition_text"-->
+            <!--app:customFont="roboto_regular"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:layout_centerInParent="true"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:id="@+id/main_activity_fly_layout"-->
+        <!--android:layout_marginTop="50dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:background="@drawable/cloud">-->
+
+        <!--<com.epitech.billy.omega_splicer.Utils.CustomFontTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/fly"-->
+            <!--android:textSize="25sp"-->
+            <!--app:customFont="roboto_regular"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:layout_centerInParent="true"/>-->
+
+    <!--</RelativeLayout>-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="150dp"-->
+        <!--android:id="@+id/main_activity_setting_layout"-->
+        <!--android:layout_marginTop="25dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_marginRight="25dp"-->
+        <!--android:layout_marginEnd="25dp"-->
+        <!--android:transitionName="setting_transition_cloud"-->
+        <!--android:background="@drawable/cloud">-->
+
+        <!--<com.epitech.billy.omega_splicer.Utils.CustomFontTextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="@string/setting"-->
+            <!--android:textSize="25sp"-->
+            <!--android:id="@+id/main_activity_setting_text"-->
+            <!--android:transitionName="setting_transition_text"-->
+            <!--app:customFont="roboto_regular"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:layout_centerInParent="true"/>-->
+
+    <!--</RelativeLayout>-->
+
+
+    <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="150dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="150dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/main_activity_setting_cloud"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:transitionName="setting_transition_cloud"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:src="@drawable/cloud"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentEnd="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="25dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginRight="25dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginEnd="25dp"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="150dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="150dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/main_activity_pair_button"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="25dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginLeft="25dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginStart="25dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@drawable/cloud"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="@string/pair"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="20sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@android:color/black"/>&ndash;&gt;-->
+
+    <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="150dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="150dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/main_activity_fly_button"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_centerHorizontal="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@drawable/cloud"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="@string/fly"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="20sp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@android:color/black"/>&ndash;&gt;-->
+
+    <!--<ImageView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:id="@+id/main_activity_panel_image"-->
+        <!--android:transitionName="fly_transition_panel"-->
+        <!--android:src="@drawable/panel"/>-->
+
+</RelativeLayout>

@@ -84,6 +84,9 @@ public class SettingActivity extends Activity {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
                     text.setTextSize(TypedValue.COMPLEX_UNIT_SP, (float) animation.getAnimatedValue());
+                    if ((float) animation.getAnimatedValue() <= 75) {
+                        text.setAllCaps(false);
+                    }
                 }
             });
             animator.start();

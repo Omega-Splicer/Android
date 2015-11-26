@@ -2,7 +2,7 @@
 <resources>
 
     <style name="AppTheme" parent="android:Theme.Material.NoActionBar.Fullscreen">
-        <item name="android:windowBackground">@color/blue_sky</item>
+        <item name="android:windowBackground">@color/gray</item>
         <item name="android:windowContentTransitions">true</item>
 
         <item name="android:windowEnterTransition">@android:transition/explode</item>

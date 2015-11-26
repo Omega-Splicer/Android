@@ -10,41 +10,48 @@
         android:layout_height="150dp"
         android:src="@drawable/omega_splicer_logo"
         android:layout_centerHorizontal="true" />
-    
-    <Button
-        android:layout_width="150dp"
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/main_activity_fly_button"
-        android:text="@string/fly"
-        android:layout_centerInParent="true"
-        android:background="@color/light_gray"
-        android:textAllCaps="false"/>
+        android:weightSum="3"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp">
 
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/main_activity_pair_button"
-        android:text="@string/pair"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@color/light_gray"
-        android:textAllCaps="false"
-        android:layout_below="@+id/main_activity_fly_button"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/main_activity_fly_button"
+            android:text="@string/fly"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@color/light_gray"
+            android:textAllCaps="false"/>
 
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/main_activity_setting_button"
-        android:text="@string/setting"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@color/light_gray"
-        android:textAllCaps="false"
-        android:layout_below="@+id/main_activity_pair_button"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/main_activity_pair_button"
+            android:text="@string/pair"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@color/light_gray"
+            android:textAllCaps="false"/>
 
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:id="@+id/main_activity_setting_button"
+            android:text="@string/setting"
+            android:background="@color/light_gray"
+            android:textAllCaps="false"/>
 
-
-
+    </LinearLayout>
 
     <!--<RelativeLayout-->
         <!--android:layout_width="150dp"-->
