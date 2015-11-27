@@ -28,3 +28,5 @@ android:
 
     # Personnal extra
     - extra-android-support
+
+    - sys-img-armeabi-v7a-android-19
