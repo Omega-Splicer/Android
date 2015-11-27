@@ -3,16 +3,10 @@ package com.epitech.billy.omega_splicer.Fly;
 import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.view.MotionEvent;
-import android.view.View;
-import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.epitech.billy.omega_splicer.R;
-import com.epitech.billy.omega_splicer.Utils.Joystick.Joystick;
-import com.epitech.billy.omega_splicer.Utils.Joystick.JoystickBuilder;
 
 /**
  * Created by Billy on 01/09/2015.
@@ -20,6 +14,9 @@ import com.epitech.billy.omega_splicer.Utils.Joystick.JoystickBuilder;
  * Allow the user to drive the paired plane with his device
  */
 public class FlyActivity extends Activity {
+
+    private int mMotorSpeed;
+    private SeekBar mMotorSeekBar;
 
 //    private RelativeLayout mJoystickLayout;
 //    private JoystickBuilder mJoystickBuilder;
@@ -30,10 +27,10 @@ public class FlyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fly);
 
-        SeekBar motorSeekBar = (SeekBar) findViewById(R.id.fly_activity_seek_bar);
+        mMotorSeekBar = (SeekBar) findViewById(R.id.fly_activity_seek_bar);
         TextView motorValue = (TextView) findViewById(R.id.fly_activity_motor_value);
-        if (motorSeekBar != null && motorValue != null) {
-            setupMotorSeekBar(motorSeekBar, motorValue);
+        if (mMotorSeekBar != null && motorValue != null) {
+            setupMotorSeekBar(mMotorSeekBar, motorValue);
         }
 
 //        mJoystickLayout = (RelativeLayout) findViewById(R.id.fly_activity_joystick);
@@ -59,13 +56,17 @@ public class FlyActivity extends Activity {
 
     private void setupMotorSeekBar(SeekBar seekBar, final TextView textView) {
         /* TODO: gérer les typeface autrement */
+
+        seekBar.setProgress(mMotorSpeed);
+
         textView.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf"));
         textView.setText(String.format("%d%%", seekBar.getProgress()));
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                textView.setText(String.format("%d%%", seekBar.getProgress()));
+                mMotorSpeed = seekBar.getProgress();
+                textView.setText(String.format("%d%%", mMotorSpeed));
             }
 
             @Override
@@ -78,5 +79,26 @@ public class FlyActivity extends Activity {
 
             }
         });
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putInt("motorValue", mMotorSpeed);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        System.out.format("------> on RestoreSavedInstance() -> receive %d%n", savedInstanceState.getInt("motorValue", 0));
+        mMotorSpeed = savedInstanceState.getInt("motorValue", 0);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (mMotorSeekBar != null) {
+            mMotorSeekBar.setProgress(mMotorSpeed);
+        }
     }
 }
