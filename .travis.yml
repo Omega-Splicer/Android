@@ -1,5 +1,7 @@
 language: android
 
+install: ./gradlew build
+
 before_script:
   cd Omega-Splicer
 
