@@ -17,5 +17,4 @@
     <string name="km_speed_unit_shared_preference">kilometerPerHour</string>
     <string name="mph_speed_unit_shared_preference">milesPerHour</string>
     <string name="ms_speed_unit_shared_preference">meterPerSecond</string>
-    <string name="button_control_shared_preference"></string>
 </resources>
