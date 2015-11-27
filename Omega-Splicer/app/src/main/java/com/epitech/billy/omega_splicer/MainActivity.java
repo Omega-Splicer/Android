@@ -9,15 +9,18 @@ import android.support.v4.util.Pair;
 import android.view.View;
 import android.widget.Button;
 
+import com.crashlytics.android.Crashlytics;
 import com.epitech.billy.omega_splicer.Fly.FlyActivity;
 import com.epitech.billy.omega_splicer.Pair.PairActivity;
 import com.epitech.billy.omega_splicer.Setting.SettingActivity;
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         Button flyButton = (Button) findViewById(R.id.main_activity_fly_button);

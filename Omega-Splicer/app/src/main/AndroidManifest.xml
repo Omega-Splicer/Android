@@ -35,6 +35,10 @@
             android:theme="@style/AppTheme">
 
         </activity>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="4e547e25a12d5d8e1d4772ec5c6ff5a9d8d83fba" />
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
