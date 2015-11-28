@@ -26,4 +26,5 @@ proguard/
 # Log Files
 *.log
 
-./Omega-Splicer/gradlew
+#personnal ignored files
+gradlew
