@@ -5,7 +5,7 @@
 
 # Omega-Splicer for Android
 
-This is the repository for the Android Omega-Splicer application. Omega-Splicer is a 5th year project from Epitech students as part of the EIP (Epitech Innovative Project).
+Ceci est le dépot de l'application android Omega-Splicer. C'est un projet Epitech de 5ème année, l'EIP (Epitech Innovative Project). 
 
 ## Contact
 

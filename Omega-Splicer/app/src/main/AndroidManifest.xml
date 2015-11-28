@@ -2,11 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.epitech.billy.omega_splicer" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
 
         <activity
             android:name=".MainActivity"
@@ -39,6 +41,4 @@
             android:name="io.fabric.ApiKey"
             android:value="4e547e25a12d5d8e1d4772ec5c6ff5a9d8d83fba" />
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
