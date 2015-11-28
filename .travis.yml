@@ -1,5 +1,8 @@
 language: android
 
+install:
+  gradle build connectedCheck --info
+
 after_failure:
   gradle --stacktrace
 
