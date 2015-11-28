@@ -1,6 +1,6 @@
 language: android
 
-install:
+script:
   gradle build connectedCheck --info
 
 after_failure:
