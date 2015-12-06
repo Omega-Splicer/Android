@@ -132,7 +132,7 @@ public class FlyActivity extends Activity {
                 LayoutInflater inflater = (LayoutInflater) v.getContext().getSystemService(LAYOUT_INFLATER_SERVICE);
                 View view = inflater.inflate(R.layout.popup_setting_layout, null);
                 final Dialog dialog = builder.setView(view).create();
-                
+
                 ((TextView) view.findViewById(R.id.setting_popup_title)).setTypeface(App.ROBOTO_BOLD);
                 ((TextView) view.findViewById(R.id.setting_popup_control)).setTypeface(App.ROBOTO_REGULAR);
                 ((TextView) view.findViewById(R.id.setting_popup_speed_unit)).setTypeface(App.ROBOTO_REGULAR);
