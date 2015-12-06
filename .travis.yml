@@ -1,7 +1,8 @@
 language: android
 
-script:
-  gradle build connectedCheck --info
+# Uncomment this to see all the test into the console
+# script:
+#   gradle build connectedCheck --info
 
 after_failure:
   gradle --stacktrace

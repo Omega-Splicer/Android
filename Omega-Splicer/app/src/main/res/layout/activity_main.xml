@@ -16,6 +16,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/main_activity_fly_button"
         android:text="@string/fly"
+        android:textColor="@color/blue_omega_splicer"
         android:layout_centerInParent="true"
         android:background="@color/light_gray"
         android:textAllCaps="false"/>
@@ -25,6 +26,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/main_activity_pair_button"
         android:text="@string/pair"
+        android:textColor="@android:color/black"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
         android:background="@color/light_gray"

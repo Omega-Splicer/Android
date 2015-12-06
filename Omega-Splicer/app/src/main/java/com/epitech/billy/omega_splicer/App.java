@@ -1,6 +1,7 @@
 package com.epitech.billy.omega_splicer;
 
 import android.app.Application;
+import android.graphics.Typeface;
 
 /**
  * Created by Billy on 01/09/2015.
@@ -9,10 +10,17 @@ import android.app.Application;
 public class App extends Application {
     private static App mInstance;
 
+    public static Typeface ROBOTO_BOLD;
+    public static Typeface ROBOTO_LIGHT;
+    public static Typeface ROBOTO_REGULAR;
+
     @Override
     public void onCreate() {
         super.onCreate();
 
+        ROBOTO_BOLD = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Bold.ttf");
+        ROBOTO_LIGHT = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Light.ttf");
+        ROBOTO_REGULAR = Typeface.createFromAsset(getAssets(), "fonts/Roboto-Regular.ttf");
         mInstance = this;
     }
 

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Omega-Splicer</string>
     <string name="shared_preference_file_key" translatable="false">com.epitech.billy.omega_splicer.PREFERENCE_FILE_KEY</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
 
     <string name="pair">Pair</string>
     <string name="fly">Fly</string>
