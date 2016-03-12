@@ -19,4 +19,6 @@
     <string name="ms_speed_unit_shared_preference">mètres par heure</string>
     <string name="cancel">Annuler</string>
     <string name="ok">OK</string>
+    <string name="bluetooth_mandatory">Le bluetooth est obligatoire</string>
+    <string name="bluetooth_not_enable">Le bluetooth n\'est pas disponible</string>
 </resources>

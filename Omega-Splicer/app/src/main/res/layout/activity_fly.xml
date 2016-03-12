@@ -70,7 +70,7 @@
         <SeekBar
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/fly_activity_seek_bar"
+            android:id="@+id/fly_activity_motor_seek_bar"
             tools:ignore="InconsistentLayout"
             android:progress="20"
             android:maxHeight="100dp"
@@ -90,7 +90,7 @@
 
     </RelativeLayout>
 
-    <!--<com.epitech.billy.omega_splicer.Utils.Joystick.JoystickLayout-->
+    <!--<JoystickLayout-->
         <!--android:layout_width="200dp"-->
         <!--android:layout_height="200dp"-->
         <!--android:background="@drawable/background_js"-->

@@ -29,4 +29,16 @@
 
     </LinearLayout>
 
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/pair_activity_blutooth_scanning"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:id="@+id/pair_activity_bluetooth_devices_list"/>
+
 </LinearLayout>

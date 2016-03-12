@@ -1,8 +1,12 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme"  parent="@android:style/Theme.NoTitleBar.Fullscreen">
+    <!-- Base application theme. parent="@android:style/Theme.NoTitleBar.Fullscreen">-->
+    <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
         <item name="android:windowBackground">@color/gray</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
 </resources>

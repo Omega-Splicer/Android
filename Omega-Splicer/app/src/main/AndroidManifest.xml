@@ -3,15 +3,20 @@
     package="com.epitech.billy.omega_splicer" >
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:name=".App">
 
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.ui.activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -20,23 +25,54 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".Pair.PairActivity"
+        <activity
+            android:name=".presentation.ui.activities.FlyActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
 
         </activity>
 
-        <activity android:name=".Fly.FlyActivity"
+        <activity
+            android:name=".presentation.ui.activities.PairActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
 
         </activity>
 
-        <activity android:name=".Setting.SettingActivity"
+        <activity
+            android:name=".presentation.ui.activities.SettingActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
 
         </activity>
+
+        <!--<activity-->
+            <!--android:name=".MainActivity"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:theme="@style/AppTheme">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
+        <!--<activity android:name=".Pair.PairActivity"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:theme="@style/AppTheme">-->
+
+        <!--</activity>-->
+
+        <!--<activity android:name=".Fly.FlyActivity"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:theme="@style/AppTheme">-->
+
+        <!--</activity>-->
+
+        <!--<activity android:name=".Setting.SettingActivity"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:theme="@style/AppTheme">-->
+
+        <!--</activity>-->
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="4e547e25a12d5d8e1d4772ec5c6ff5a9d8d83fba" />

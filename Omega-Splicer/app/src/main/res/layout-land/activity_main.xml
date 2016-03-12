@@ -63,7 +63,7 @@
         <!--android:background="@drawable/cloud"-->
         <!--android:transitionName="pair_transition_cloud">-->
 
-        <!--<com.epitech.billy.omega_splicer.Utils.CustomFontTextView-->
+        <!--<CustomFontTextView-->
             <!--android:layout_width="wrap_content"-->
             <!--android:layout_height="wrap_content"-->
             <!--android:text="@string/pair"-->
@@ -84,7 +84,7 @@
         <!--android:layout_centerHorizontal="true"-->
         <!--android:background="@drawable/cloud">-->
 
-        <!--<com.epitech.billy.omega_splicer.Utils.CustomFontTextView-->
+        <!--<CustomFontTextView-->
             <!--android:layout_width="wrap_content"-->
             <!--android:layout_height="wrap_content"-->
             <!--android:text="@string/fly"-->
@@ -107,7 +107,7 @@
         <!--android:transitionName="setting_transition_cloud"-->
         <!--android:background="@drawable/cloud">-->
 
-        <!--<com.epitech.billy.omega_splicer.Utils.CustomFontTextView-->
+        <!--<CustomFontTextView-->
             <!--android:layout_width="wrap_content"-->
             <!--android:layout_height="wrap_content"-->
             <!--android:text="@string/setting"-->

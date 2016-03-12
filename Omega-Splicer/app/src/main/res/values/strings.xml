@@ -8,6 +8,17 @@
     <string name="fly">Fly</string>
     <string name="setting">Setting</string>
 
+    <!-- ************* -->
+    <!-- MISCELLANEOUS -->
+    <!-- ************* -->
+
+    <string name="bluetooth_not_enable">The bluetooth is not enable</string>
+    <string name="bluetooth_mandatory">The bluetooth is mandatory</string>
+
+    <!-- ******************** -->
+    <!-- END OF MISCELLANEOUS -->
+    <!-- ******************** -->
+
     <!-- ************ -->
     <!-- SETTING PAGE -->
     <!-- ************ -->
@@ -46,5 +57,9 @@
     <string name="fly_activity_setting_description">Open the settings</string>
     <string name="fly_activity_bluetooth_signal_description">Bluetooth strength signal</string>
     <string name="fly_activity_share_description">Share the fly\'s data</string>
+
+    <!-- *************** -->
+    <!-- END OF FLY PAGE -->
+    <!-- *************** -->
 
 </resources>
