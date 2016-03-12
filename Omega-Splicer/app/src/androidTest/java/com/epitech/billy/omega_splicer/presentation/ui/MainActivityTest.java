@@ -39,7 +39,6 @@ public class MainActivityTest {
         assertThat("MainActivity.FlyButton is null", onView(withId(R.id.main_activity_fly_button)), notNullValue());
         onView(withId(R.id.main_activity_fly_button)).check(ViewAssertions.matches(ViewMatchers.withText(R.string.fly)));
         onView(withId(R.id.main_activity_fly_button)).perform(click());
-//        assertThat("The FlyActivity is null when click on MainActivity.FlyButton", withId(R.id.fly_activity_setting_button), notNullValue());
         onView(withId(R.id.fly_activity_setting_button)).check(ViewAssertions.matches(Matchers.notNullValue()));
     }
 
@@ -55,7 +54,6 @@ public class MainActivityTest {
     public void checkSettingButton() {
         assertThat("MainActivity.SettingButton is null", onView(withId(R.id.main_activity_setting_button)), notNullValue());
         onView(withId(R.id.main_activity_setting_button)).check(ViewAssertions.matches(ViewMatchers.withText(R.string.setting)));
-        onView(withId(R.id.main_activity_setting_button)).check(ViewAssertions.matches(Matchers.notNullValue()));
         onView(withId(R.id.main_activity_setting_button)).perform(click());
         onView(withId(R.id.setting_activity_title)).check(ViewAssertions.matches(Matchers.notNullValue()));
     }
