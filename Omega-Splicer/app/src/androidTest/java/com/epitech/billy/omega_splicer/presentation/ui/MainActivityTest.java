@@ -15,6 +15,7 @@ import org.junit.runner.RunWith;
 import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.notNullValue;
@@ -37,7 +38,7 @@ public class MainActivityTest {
         onView(withId(R.id.main_activity_fly_button)).check(matches(notNullValue()));
         onView(withId(R.id.main_activity_fly_button)).check(matches(withText(R.string.fly)));
         onView(withId(R.id.main_activity_fly_button)).perform(click());
-        onView(withId(R.id.fly_activity_setting_button)).check(matches(Matchers.notNullValue()));
+        onView(withId(R.id.fly_activity_setting_button)).check(matches(isDisplayed()));
     }
 
     @Test
@@ -45,7 +46,7 @@ public class MainActivityTest {
         onView(withId(R.id.main_activity_pair_button)).check(matches(notNullValue()));
         onView(withId(R.id.main_activity_pair_button)).check(matches(withText(R.string.pair)));
         onView(withId(R.id.main_activity_pair_button)).perform(click());
-        onView(withId(R.id.pair_activity_title)).check(matches(Matchers.notNullValue()));
+        onView(withId(R.id.pair_activity_title)).check(matches(isDisplayed()));
     }
 
     @Test
@@ -53,7 +54,7 @@ public class MainActivityTest {
         onView(withId(R.id.main_activity_setting_button)).check(matches(notNullValue()));
         onView(withId(R.id.main_activity_setting_button)).check(matches(withText(R.string.setting)));
         onView(withId(R.id.main_activity_setting_button)).perform(click());
-        onView(withId(R.id.setting_activity_title)).check(matches(Matchers.notNullValue()));
+        onView(withId(R.id.setting_activity_title)).check(matches(isDisplayed()));
     }
 
 }
