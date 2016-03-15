@@ -20,6 +20,5 @@
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
     <string name="bluetooth_mandatory">The bluetooth is mandatory</string>
-    <string name="bluetooth_not_enabled">The bluetooth is not enable</string>
     <string name="bluetooth_not_enable">The bluetooth is not enable</string>
 </resources>

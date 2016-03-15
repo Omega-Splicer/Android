@@ -1,7 +1,7 @@
 language: android
 
 script:
-  gradle build connectedCheck --stacktrace
+  gradle build connectedAndroidTest
 
 after_failure:
   gradle --stacktrace
