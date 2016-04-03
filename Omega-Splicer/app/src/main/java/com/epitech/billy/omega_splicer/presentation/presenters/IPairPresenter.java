@@ -9,5 +9,7 @@ import com.epitech.billy.omega_splicer.presentation.ui.IBaseView;
 public interface IPairPresenter extends IBasePresenter {
     interface View extends IBaseView {
         void addPlaneToList(Plane plane);
+        void displayErrorBluetooth(String error);
+        void displayErrorBluetoothDisabled();
     }
 }

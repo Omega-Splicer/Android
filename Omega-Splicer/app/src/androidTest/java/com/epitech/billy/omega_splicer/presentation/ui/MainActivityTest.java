@@ -7,7 +7,6 @@ import android.test.suitebuilder.annotation.SmallTest;
 import com.epitech.billy.omega_splicer.R;
 import com.epitech.billy.omega_splicer.presentation.ui.activities.MainActivity;
 
-import org.hamcrest.Matchers;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -49,12 +48,12 @@ public class MainActivityTest {
         onView(withId(R.id.pair_activity_title)).check(matches(isDisplayed()));
     }
 
-    @Test
-    public void checkSettingButton() {
-        onView(withId(R.id.main_activity_setting_button)).check(matches(notNullValue()));
-        onView(withId(R.id.main_activity_setting_button)).check(matches(withText(R.string.setting)));
-        onView(withId(R.id.main_activity_setting_button)).perform(click());
-        onView(withId(R.id.setting_activity_title)).check(matches(isDisplayed()));
-    }
+//    @Test
+//    public void checkSettingButton() {
+//        onView(withId(R.id.main_activity_setting_button)).check(matches(notNullValue()));
+//        onView(withId(R.id.main_activity_setting_button)).check(matches(withText(R.string.setting)));
+//        onView(withId(R.id.main_activity_setting_button)).perform(click());
+//        onView(withId(R.id.setting_activity_title)).check(matches(isDisplayed()));
+//    }
 
 }

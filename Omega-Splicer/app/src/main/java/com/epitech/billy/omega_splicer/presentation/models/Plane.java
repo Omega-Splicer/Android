@@ -9,6 +9,7 @@ package com.epitech.billy.omega_splicer.presentation.models;
 public class Plane {
 
     private String name;
+    private int signalStrength;
 
     public Plane(String name) {
         this.name = name;
@@ -20,5 +21,13 @@ public class Plane {
 
     public String getName() {
         return this.name;
+    }
+
+    public int getSignalStrength() {
+        return signalStrength;
+    }
+
+    public void setSignalStrength(int signalStrength) {
+        this.signalStrength = signalStrength;
     }
 }
