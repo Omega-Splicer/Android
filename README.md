@@ -5,7 +5,7 @@
 
 # Omega-Splicer for Android
 
-Ceci est le dépot de l'application android Omega-Splicer. C'est un projet Epitech de 5ème année, l'EIP (Epitech Innovative Project). 
+Ceci est le dépot de l'application android Omega-Splicer. C'est un projet Epitech de 5ème année, l'EIP (Epitech Innovative Project).
 
 ## Contact
 
@@ -17,9 +17,12 @@ See [LICENSE](http://blog.yjl.im/2014/06/beer-ware-license-revision-42.html).
 
 ## Todo
 
-• Design général
+- ##### Design
+  - Page d'accueil
+  - Page de vol
+  - Page de pairage
 
-### Ecran de vol
-• Formatage des commandes  
-• Joystick  
-• Seekbar vertical de vitesse
+- ##### Ecran de vol
+  - Formatage des commandes  
+  - Joystick  
+  - Seekbar vertical de vitesse
