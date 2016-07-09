@@ -52,8 +52,6 @@ public class PairedDevicesFragment extends Fragment implements IPairedDevicesPre
         mPlanesRecyclerView.setAdapter(mAdapter);
         mPlanesRecyclerView.setHasFixedSize(false);
 
-        mAdapter.addPlane(new PlaneModel("Mockup Plane"));
-
         // todo put that on top
         final ConnectWithOmegaSplicerPlane connection = new ConnectWithOmegaSplicerPlane(this.getContext());
 
@@ -87,14 +85,14 @@ public class PairedDevicesFragment extends Fragment implements IPairedDevicesPre
 
     @Override
     public void addPlaneToList(PlaneModel plane) {
-//        mAdapter.addPlane(plane);
-//        mAdapter.notifyDataSetChanged();
+        mAdapter.addPlane(plane);
+        mAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void addPlanesToList(List<PlaneModel> planes) {
-//        mAdapter.addPlanes(planes);
-//        mAdapter.notifyDataSetChanged();
+        mAdapter.addPlanes(planes);
+        mAdapter.notifyDataSetChanged();
     }
 
     @Override

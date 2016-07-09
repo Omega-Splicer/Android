@@ -58,7 +58,6 @@ public class ScannedDevicesFragment extends Fragment implements IScannedDevicesP
         mPlanesRecyclerView.setAdapter(mAdapter);
         mPlanesRecyclerView.setHasFixedSize(false);
 
-        mAdapter.addPlane(new PlaneModel("Test Plane"));
         return rootView;
     }
 
