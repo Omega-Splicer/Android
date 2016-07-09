@@ -4,6 +4,7 @@ import com.epitech.billy.omega_splicer.domain.executors.IMainThread;
 import com.epitech.billy.omega_splicer.domain.executors.IThreadExecutor;
 import com.epitech.billy.omega_splicer.presentation.presenters.AbstractPresenter;
 import com.epitech.billy.omega_splicer.presentation.presenters.IFlyPresenter;
+import com.epitech.billy.omega_splicer.presentation.storage.SettingSharedPreferencesStore;
 
 /**
  * Created by bichon_b on 3/4/16.
@@ -17,7 +18,6 @@ public class FlyPresenter extends AbstractPresenter implements IFlyPresenter {
         super(threadExecutor, mainThread);
         mFlyView = flyView;
         mMotorSpeed = 0;
-        System.out.println("creating the fly presenter");
     }
 
     @Override
@@ -47,7 +47,6 @@ public class FlyPresenter extends AbstractPresenter implements IFlyPresenter {
 
     @Override
     public void changeMotorSpeed(int motorSpeed) {
-        System.out.println("inside the change of presenter");
         mMotorSpeed = motorSpeed;
         mFlyView.showMotorSpeed(mMotorSpeed);
     }

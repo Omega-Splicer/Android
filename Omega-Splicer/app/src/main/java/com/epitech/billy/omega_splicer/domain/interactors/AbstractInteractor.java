@@ -1,7 +1,7 @@
 package com.epitech.billy.omega_splicer.domain.interactors;
 
-import com.epitech.billy.omega_splicer.domain.executors.IThreadExecutor;
 import com.epitech.billy.omega_splicer.domain.executors.IMainThread;
+import com.epitech.billy.omega_splicer.domain.executors.IThreadExecutor;
 
 /**
  * Created by bichon_b on 3/3/16.

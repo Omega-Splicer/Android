@@ -21,4 +21,14 @@
     <string name="ok">OK</string>
     <string name="bluetooth_mandatory">The bluetooth is mandatory</string>
     <string name="bluetooth_not_enable">The bluetooth is not enable</string>
+    <string name="orientation_landscape">Landscape</string>
+    <string name="orientation_portrait">Portrait</string>
+    <string name="setting_orientation">Orientation</string>
+    <string name="pair_activity_conencted_status">Connected</string>
+    <string name="pair_activity_connecting_status">Connecting...</string>
+    <string name="pair_activity_connected_status">Connected</string>
+    <string name="pair_activity_invalid_address_error">Invalid bluetooth address, please try another device</string>
+    <string name="pair_activity_missing_address_error">Missing bluetooth address, please try another device</string>
+    <string name="pair_activity_unknown_error">An unexpected error occurred, contact someone</string>
+    <string name="pair_activity_cant_connect_error">Couldn\'t connect to the device</string>
 </resources>

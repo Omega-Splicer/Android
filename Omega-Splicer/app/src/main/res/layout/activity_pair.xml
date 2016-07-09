@@ -1,44 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/airport_face"
+        android:scaleType="centerCrop"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:src="@drawable/ic_keyboard_backspace_black_36dp"
-            android:scaleType="center"
-            android:background="@drawable/cloud"
-            android:transitionName="pair_transition_cloud"
-            android:id="@+id/pair_activity_back_cloud"/>
-
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/pair"
-            android:textAllCaps="true"
-            android:textSize="50sp"
-            android:id="@+id/pair_activity_title"
-            android:transitionName="pair_transition_text"
-            android:layout_gravity="center_vertical"/>
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_keyboard_backspace_black_36dp"
+                android:scaleType="center"
+                android:background="@drawable/cloud"
+                android:transitionName="pair_transition_cloud"
+                android:id="@+id/pair_activity_back_cloud"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/pair"
+                android:textAllCaps="true"
+                android:textSize="50sp"
+                android:id="@+id/pair_activity_title"
+                android:transitionName="pair_transition_text"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/paired_devices_fragment"
+                    android:name="com.epitech.billy.omega_splicer.presentation.ui.fragments.PairedDevicesFragment"
+                    tools:layout="@layout/paired_devices_view" />
+
+                <fragment
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/scanned_devices_fragment"
+                    android:name="com.epitech.billy.omega_splicer.presentation.ui.fragments.ScannedDevicesFragment"
+                    tools:layout="@layout/scanned_devices_view" />
+
+            </LinearLayout>
+
+        </ScrollView>
 
     </LinearLayout>
 
-    <ProgressBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:visibility="gone"
-        android:id="@+id/pair_activity_blutooth_scanning"/>
-
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="10dp"
-        android:id="@+id/pair_activity_bluetooth_devices_list"/>
-
-</LinearLayout>
+</RelativeLayout>

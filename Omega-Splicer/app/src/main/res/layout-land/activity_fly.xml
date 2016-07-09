@@ -7,8 +7,8 @@
     <RelativeLayout
         android:layout_width="50dp"
         android:layout_height="match_parent"
+        android:id="@+id/fly_activity_left_panel"
         android:background="#676767"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true">
 
         <ImageView
@@ -39,8 +39,8 @@
     <RelativeLayout
         android:layout_width="50dp"
         android:layout_height="match_parent"
+        android:id="@+id/fly_activity_right_panel"
         android:background="#676767"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true">
 
         <ImageView
@@ -58,6 +58,28 @@
             android:layout_alignParentBottom="true"
             android:background="@android:color/transparent"/>
 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/fly_activity_layout_joystick_power"
+        android:layout_toEndOf="@+id/fly_activity_left_panel"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/background_js">
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:id="@+id/fly_activity_layout_joystick_control"
+        android:layout_toStartOf="@+id/fly_activity_right_panel"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/background_js">
     </RelativeLayout>
 
     <!--<JoystickLayout-->

@@ -1,58 +1,73 @@
 package com.epitech.billy.omega_splicer.presentation.presenters.impl;
 
-import com.epitech.billy.omega_splicer.bluetooth.GetAllOmegaSplicerPlanes;
-import com.epitech.billy.omega_splicer.domain.data.IGetAllOmegaSplicerPlanes;
+import com.epitech.billy.omega_splicer.domain.data.IBluetoothConnectionManager;
 import com.epitech.billy.omega_splicer.domain.executors.IMainThread;
 import com.epitech.billy.omega_splicer.domain.executors.IThreadExecutor;
-import com.epitech.billy.omega_splicer.domain.interactors.IGetAllPlanesAvailableInteractor;
-import com.epitech.billy.omega_splicer.domain.interactors.impl.GetAllPlanesAvailableInteractor;
-import com.epitech.billy.omega_splicer.presentation.models.Plane;
+import com.epitech.billy.omega_splicer.domain.interactors.IStartConnectionInteractor;
+import com.epitech.billy.omega_splicer.domain.interactors.impl.StartConnectionInteractor;
 import com.epitech.billy.omega_splicer.presentation.presenters.AbstractPresenter;
 import com.epitech.billy.omega_splicer.presentation.presenters.IPairPresenter;
+import com.epitech.billy.omega_splicer.presentation.presenters.IPairedDevicesPresenter;
 
 /**
  * Created by bichon_b on 3/4/16.
  */
-public class PairPresenter extends AbstractPresenter implements IPairPresenter, IGetAllPlanesAvailableInteractor.Callback {
+public final class PairPresenter extends AbstractPresenter implements IPairPresenter, IStartConnectionInteractor.Callback {
 
-    private  View mPairView;
-    private IGetAllOmegaSplicerPlanes mGetAllBluetoothPlanes;
+    private View mPairView;
+    private IBluetoothConnectionManager mConnectionManager;
+    private IStartConnectionInteractor mInteractor;
 
-    public PairPresenter(IThreadExecutor threadExecutor, IMainThread mainThread, View pairView, IGetAllOmegaSplicerPlanes getAllBluetoothPlanes) {
+    // subpresenters
+    private IPairedDevicesPresenter mPairedSubviewPresenter;
+
+    public PairPresenter(IThreadExecutor threadExecutor, IMainThread mainThread, View pairView, IBluetoothConnectionManager connectionManager) {
         super(threadExecutor, mainThread);
         mPairView = pairView;
-        mGetAllBluetoothPlanes = getAllBluetoothPlanes;
+        mConnectionManager = connectionManager;
+        mInteractor = new StartConnectionInteractor(mThreadExecutor, mMainThread, this, mConnectionManager);
+        mInteractor.execute();
     }
 
     @Override
     public void resume() {
-        super.resume();
-        mPairView.showLoading();
-        IGetAllPlanesAvailableInteractor interactor = new GetAllPlanesAvailableInteractor(mThreadExecutor, mMainThread, this, mGetAllBluetoothPlanes);
-        interactor.execute();
+        mPairedSubviewPresenter.fetch();
     }
 
     @Override
-    public void onNewPlaneDetected(com.epitech.billy.omega_splicer.domain.models.Plane plane) {
-//        mPairView.hideLoading(); // TODO: display another loader
-        Plane _plane = new Plane(plane.getName());
-        _plane.setSignalStrength(plane.getSignalStrength());
-        mPairView.addPlaneToList(_plane); // TODO: use the converters
+    public void pause() {}
+
+    @Override
+    public void stop() {}
+
+    @Override
+    public void destroy() {
+        mInteractor.stop();
+        mPairView = null;
     }
 
     @Override
-    public void onError(IGetAllOmegaSplicerPlanes.Error error) {
-        if (error.getCode() == GetAllOmegaSplicerPlanes.BLUETOOTH_DISABLED) {
+    public void onError(String message) {
+
+    }
+
+    @Override
+    public void unsupported() {
+        // todo
+    }
+
+    @Override
+    public void deactivate() {
+        if (mPairView != null)
             mPairView.displayErrorBluetoothDisabled();
-        }
-        else {
-            mPairView.displayErrorBluetooth(error.getDescription());
-        }
     }
 
     @Override
-    public void onFinish() {
-        mPairView.hideLoading();
-        // TODO the adapter is empty display a message, else hide the loader
+    public void activate() {
+        mPairedSubviewPresenter.fetch();
+    }
+
+    public void setPairedSubviewPresenter(IPairedDevicesPresenter subPresenter) {
+        mPairedSubviewPresenter = subPresenter;
     }
 }

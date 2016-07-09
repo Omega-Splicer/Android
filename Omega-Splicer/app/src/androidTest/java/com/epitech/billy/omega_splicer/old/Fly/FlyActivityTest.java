@@ -11,6 +11,7 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.epitech.billy.omega_splicer.R;
+import com.epitech.billy.omega_splicer.presentation.ui.activities.FlyActivity;
 
 import org.hamcrest.Matcher;
 import org.hamcrest.MatcherAssert;

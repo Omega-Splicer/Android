@@ -7,10 +7,13 @@ import com.epitech.billy.omega_splicer.presentation.ui.IBaseView;
  */
 public interface ISettingPresenter extends IBasePresenter {
     interface View extends IBaseView {
+        void showOrientationSetting(String orientationSetting);
         void showControlSetting(String controlSetting);
         void showSpeedUnitSetting(String speedUnitSetting);
+        void changeOrientation(String orientation);
     }
 
+    void changeOrientationSetting(String newOrientationSetting);
     void changeControlSetting(String newControlSetting);
     void changeSpeedUnitSetting(String newSpeedUnitSetting);
 }

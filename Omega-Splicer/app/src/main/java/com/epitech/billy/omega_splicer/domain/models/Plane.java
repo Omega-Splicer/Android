@@ -9,6 +9,9 @@ package com.epitech.billy.omega_splicer.domain.models;
 public class Plane {
     private String name;
     private int signalStrength;
+    private String macAddress;
+
+    public Plane() {}
 
     public Plane(String name) {
         this.name = name;
@@ -28,5 +31,13 @@ public class Plane {
 
     public void setSignalStrength(int signalStrength) {
         this.signalStrength = signalStrength;
+    }
+
+    public String getMacAddress() {
+        return macAddress;
+    }
+
+    public void setMacAddress(String macAddress) {
+        this.macAddress = macAddress;
     }
 }

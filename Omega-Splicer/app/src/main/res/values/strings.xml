@@ -23,6 +23,11 @@
     <!-- SETTING PAGE -->
     <!-- ************ -->
 
+    <!-- orientation values -->
+    <string name="setting_orientation">Orientation</string>
+    <string name="orientation_portrait">Portrait</string>
+    <string name="orientation_landscape">Landscape</string>
+
     <!-- control values -->
     <string name="setting_controls">Controls</string>
     <string name="control_buttons">Buttons</string>
@@ -35,6 +40,10 @@
     <string name="speed_unit_kmph" translatable="false">km/h</string>
 
     <!-- shared preference values -->
+    <string name="orientation_shared_preference" translatable="false">orientationSettingPreference</string>
+    <string name="default_orientation_value_shared_preference" translatable="false">portrait</string>
+    <string name="portrait_orientation_shared_preference" translatable="false">portrait</string>
+    <string name="landscape_orientation_shared_preference" translatable="false">landscape</string>
     <string name="control_shared_preference" translatable="false">controlSettingPreference</string>
     <string name="default_control_value_shared_preference" translatable="false">buttons</string>
     <string name="button_control_shared_preference" translatable="false">buttons</string>
@@ -52,7 +61,7 @@
     <!-- ******** -->
     <!-- FLY PAGE -->
     <!-- ******** -->
-    
+
     <string name="fly_activity_battery_level_description">Level of the plane\'s battery</string>
     <string name="fly_activity_setting_description">Open the settings</string>
     <string name="fly_activity_bluetooth_signal_description">Bluetooth strength signal</string>
@@ -61,5 +70,23 @@
     <!-- *************** -->
     <!-- END OF FLY PAGE -->
     <!-- *************** -->
+
+
+    <!-- ********* -->
+    <!-- PAIR PAGE -->
+    <!-- ********* -->
+
+    <string name="pair_activity_connecting_status">Connecting…</string>
+    <string name="pair_activity_connected_status">Connected</string>
+    <string name="pair_activity_invalid_address_error">Invalid bluetooth address, please try another device</string>
+    <string name="pair_activity_missing_address_error">Missing bluetooth address, please try another device</string>
+    <string name="pair_activity_unknown_error">An unexpected error occurred, contact someone</string>
+    <string name="pair_activity_cant_connect_error">Couldn\'t connect to the device</string>
+
+    <!-- **************** -->
+    <!-- END OF PAIR PAGE -->
+    <!-- **************** -->
+
+
 
 </resources>

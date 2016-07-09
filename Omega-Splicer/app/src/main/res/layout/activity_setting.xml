@@ -30,133 +30,204 @@
 
     </LinearLayout>
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent">
 
-        <View
-            android:layout_width="50dp"
-            android:layout_height="1dp"
-            android:background="@color/light_gray"
-            android:layout_gravity="center_vertical" />
-
-        <TextView
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/setting_controls"
-            android:textSize="25sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"/>
+            android:orientation="vertical">
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="@color/light_gray"
-            android:layout_gravity="center_vertical" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    </LinearLayout>
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray"
+                    android:layout_gravity="center_vertical" />
 
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:id="@+id/setting_activity_controls_radio_group"
-        android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_orientation"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"/>
 
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/setting_activity_control_with_buttons"
-            android:text="@string/control_buttons"
-            android:textSize="25sp"
-            android:checked="true"
-            android:tag="@string/button_control_shared_preference"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_gray"
+                    android:layout_gravity="center_vertical" />
 
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/setting_activity_control_with_gyroscope"
-            android:text="@string/control_gyroscope"
-            android:textSize="25sp"
-            android:tag="@string/gyroscope_control_shared_preference"/>
+            </LinearLayout>
 
-    </RadioGroup>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/setting_activity_orientation_radio_group"
+                android:layout_marginBottom="20dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/setting_activity_orientation_portrait"
+                    android:text="@string/orientation_portrait"
+                    android:textSize="25sp"
+                    android:checked="false"
+                    android:tag="@string/button_control_shared_preference"/>
 
-        <View
-            android:layout_width="50dp"
-            android:layout_height="1dp"
-            android:background="@color/light_gray"
-            android:layout_gravity="center_vertical" />
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/setting_activity_orientation_landscape"
+                    android:text="@string/orientation_landscape"
+                    android:textSize="25sp"
+                    android:checked="false"
+                    android:tag="@string/gyroscope_control_shared_preference"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/setting_speed_unit"
-            android:textSize="25sp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"/>
+            </RadioGroup>
 
-        <View
-            android:layout_width="0dp"
-            android:layout_height="1dp"
-            android:layout_weight="1"
-            android:background="@color/light_gray"
-            android:layout_gravity="center_vertical" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-    </LinearLayout>
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray"
+                    android:layout_gravity="center_vertical" />
 
-    <RadioGroup
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/setting_activity_speed_unit_radio_group"
-        android:orientation="horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_controls"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"/>
 
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/setting_activity_speed_unit_km_h"
-            android:text="@string/speed_unit_kmph"
-            android:textSize="25sp"
-            android:checked="true"
-            android:tag="@string/km_speed_unit_shared_preference"/>
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_gray"
+                    android:layout_gravity="center_vertical" />
 
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/setting_activity_speed_unit_m_s"
-            android:text="@string/speed_unit_mps"
-            android:textSize="25sp"
-            android:tag="@string/ms_speed_unit_shared_preference"/>
+            </LinearLayout>
 
-        <RadioButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/setting_activity_speed_unit_mph"
-            android:text="@string/speed_unit_mph"
-            android:textSize="25sp"
-            android:tag="@string/mph_speed_unit_shared_preference"/>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:id="@+id/setting_activity_controls_radio_group"
+                android:layout_marginBottom="20dp">
 
-    </RadioGroup>
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/setting_activity_control_with_buttons"
+                    android:text="@string/control_buttons"
+                    android:textSize="25sp"
+                    android:checked="true"
+                    android:tag="@string/button_control_shared_preference"/>
 
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/setting_activity_control_with_gyroscope"
+                    android:text="@string/control_gyroscope"
+                    android:textSize="25sp"
+                    android:tag="@string/gyroscope_control_shared_preference"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray"
+                    android:layout_gravity="center_vertical" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/setting_speed_unit"
+                    android:textSize="25sp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginEnd="10dp"/>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1"
+                    android:background="@color/light_gray"
+                    android:layout_gravity="center_vertical" />
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/setting_activity_speed_unit_radio_group"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/setting_activity_speed_unit_km_h"
+                    android:text="@string/speed_unit_kmph"
+                    android:textSize="25sp"
+                    android:checked="true"
+                    android:tag="@string/km_speed_unit_shared_preference"/>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/setting_activity_speed_unit_m_s"
+                    android:text="@string/speed_unit_mps"
+                    android:textSize="25sp"
+                    android:tag="@string/ms_speed_unit_shared_preference"/>
+
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/setting_activity_speed_unit_mph"
+                    android:text="@string/speed_unit_mph"
+                    android:textSize="25sp"
+                    android:tag="@string/mph_speed_unit_shared_preference"/>
+
+            </RadioGroup>
+
+        </LinearLayout>
+
+    </ScrollView>
 
 </LinearLayout>

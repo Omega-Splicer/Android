@@ -1,6 +1,6 @@
 package com.epitech.billy.omega_splicer.domain.interactors;
 
-import com.epitech.billy.omega_splicer.domain.data.IGetAllOmegaSplicerPlanes;
+import com.epitech.billy.omega_splicer.domain.data.IScanOmegaSplicerPlanes;
 import com.epitech.billy.omega_splicer.domain.models.Plane;
 
 /**
@@ -9,7 +9,7 @@ import com.epitech.billy.omega_splicer.domain.models.Plane;
 public interface IGetAllPlanesAvailableInteractor extends IBaseInteractor {
     interface Callback {
         void onNewPlaneDetected(Plane plane);
-        void onError(IGetAllOmegaSplicerPlanes.Error error);
+        void onError(IScanOmegaSplicerPlanes.Error error);
         void onFinish();
     }
 }

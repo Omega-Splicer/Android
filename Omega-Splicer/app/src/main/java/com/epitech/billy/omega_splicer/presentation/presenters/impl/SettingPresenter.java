@@ -1,16 +1,11 @@
 package com.epitech.billy.omega_splicer.presentation.presenters.impl;
 
-import com.epitech.billy.omega_splicer.domain.data.ISettingSharedPreferencesStore;
+import com.epitech.billy.omega_splicer.App;
 import com.epitech.billy.omega_splicer.domain.executors.IMainThread;
 import com.epitech.billy.omega_splicer.domain.executors.IThreadExecutor;
-import com.epitech.billy.omega_splicer.domain.interactors.IChangeControlSettingInteractor;
-import com.epitech.billy.omega_splicer.domain.interactors.IChangeSpeedUnitSettingInteractor;
-import com.epitech.billy.omega_splicer.domain.interactors.IGetCurrentSettingsInteractor;
-import com.epitech.billy.omega_splicer.domain.interactors.impl.ChangeControlSettingInteractor;
-import com.epitech.billy.omega_splicer.domain.interactors.impl.ChangeSpeedUnitSettingInteractor;
-import com.epitech.billy.omega_splicer.domain.interactors.impl.GetCurrentSettingsInteractor;
 import com.epitech.billy.omega_splicer.presentation.presenters.AbstractPresenter;
 import com.epitech.billy.omega_splicer.presentation.presenters.ISettingPresenter;
+import com.epitech.billy.omega_splicer.presentation.storage.SettingSharedPreferencesStore;
 
 /**
  * Created by bichon_b on 3/4/16.
@@ -24,37 +19,55 @@ public class SettingPresenter extends AbstractPresenter implements ISettingPrese
     private View mSettingView;
 
     // Storage
-    private ISettingSharedPreferencesStore mSettingSharedPreferencesStore;
+    private SettingSharedPreferencesStore mSettingSharedPreferencesStore;
 
-    // Interactors
-    private IChangeControlSettingInteractor mChangeControlSettingInteractor;
-    private IChangeSpeedUnitSettingInteractor mChangeSpeedUnitSettingInteractor;
-
-    public SettingPresenter(IThreadExecutor threadExecutor, IMainThread mainThread, View settingView, ISettingSharedPreferencesStore settingSharedPreferencesStore) {
+    public SettingPresenter(IThreadExecutor threadExecutor, IMainThread mainThread, View settingView, SettingSharedPreferencesStore settingSharedPreferencesStore) {
         super(threadExecutor, mainThread);
         mSettingView = settingView;
         mSettingSharedPreferencesStore = settingSharedPreferencesStore;
-        mChangeControlSettingInteractor = new ChangeControlSettingInteractor(mThreadExecutor, mMainThread, mSettingSharedPreferencesStore);
-        mChangeSpeedUnitSettingInteractor = new ChangeSpeedUnitSettingInteractor(mThreadExecutor, mMainThread, mSettingSharedPreferencesStore);
     }
 
     @Override
     public void resume() {
-        super.resume();
-        IGetCurrentSettingsInteractor interactor = new GetCurrentSettingsInteractor(mThreadExecutor, mMainThread, mSettingSharedPreferencesStore);
-        mSettingView.showControlSetting(interactor.getCurrentControlSetting());
-        mSettingView.showSpeedUnitSetting(interactor.getCurrentSpeedUnitSetting());
+        mSettingView.showOrientationSetting(mSettingSharedPreferencesStore.getCurrentOrientationSetting());
+        mSettingView.showControlSetting(mSettingSharedPreferencesStore.getCurrentControlSetting());
+        mSettingView.showSpeedUnitSetting(mSettingSharedPreferencesStore.getCurrentSpeedUnitSetting());
+    }
+
+    @Override
+    public void pause() {
+
+    }
+
+    @Override
+    public void stop() {
+
+    }
+
+    @Override
+    public void destroy() {
+
+    }
+
+    @Override
+    public void onError(String message) {
+
+    }
+
+    @Override
+    public void changeOrientationSetting(String newOrientationSetting) {
+        mSettingSharedPreferencesStore.changeOrientationSetting(newOrientationSetting);
+        App.getInstance().setGeneralOrientation(newOrientationSetting);
+        mSettingView.changeOrientation(newOrientationSetting);
     }
 
     @Override
     public void changeControlSetting(String newControlSetting) {
-        mChangeControlSettingInteractor.setNewControlSetting(newControlSetting);
-        mChangeControlSettingInteractor.execute();
+        mSettingSharedPreferencesStore.changeControlSetting(newControlSetting);
     }
 
     @Override
     public void changeSpeedUnitSetting(String newSpeedUnitSetting) {
-        mChangeSpeedUnitSettingInteractor.setNewSpeedUnitSetting(newSpeedUnitSetting);
-        mChangeSpeedUnitSettingInteractor.execute();
+        mSettingSharedPreferencesStore.changeSpeedUnitSetting(newSpeedUnitSetting);
     }
 }

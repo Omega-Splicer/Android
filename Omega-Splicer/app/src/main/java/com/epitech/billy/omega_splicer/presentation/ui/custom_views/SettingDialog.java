@@ -14,7 +14,7 @@ import com.epitech.billy.omega_splicer.R;
 import com.epitech.billy.omega_splicer.domain.executors.impl.ThreadExecutor;
 import com.epitech.billy.omega_splicer.presentation.presenters.ISettingPresenter;
 import com.epitech.billy.omega_splicer.presentation.presenters.impl.SettingPresenter;
-import com.epitech.billy.omega_splicer.storage.SettingSharedPreferencesStore;
+import com.epitech.billy.omega_splicer.presentation.storage.SettingSharedPreferencesStore;
 import com.epitech.billy.omega_splicer.threading.MainThread;
 
 import java.util.ArrayList;
@@ -47,7 +47,7 @@ public class SettingDialog extends AlertDialog implements ISettingPresenter.View
     public SettingDialog(Context context) {
         super(context);
         mContext = context;
-        mSettingPresenter = new SettingPresenter(ThreadExecutor.getInstance(), MainThread.getInstance(), this, new SettingSharedPreferencesStore(context));
+        mSettingPresenter = new SettingPresenter(ThreadExecutor.getInstance(), MainThread.getInstance(), this, new SettingSharedPreferencesStore(mContext));
     }
 
     @Override
@@ -146,6 +146,11 @@ public class SettingDialog extends AlertDialog implements ISettingPresenter.View
     }
 
     @Override
+    public void showOrientationSetting(String orientationSetting) {
+        // todo
+    }
+
+    @Override
     public void showControlSetting(String controlSetting) {
         if (mSettingDialogControlSpinner != null) {
             if (controlSetting.equals(mContext.getString(R.string.button_control_shared_preference))) {
@@ -170,6 +175,11 @@ public class SettingDialog extends AlertDialog implements ISettingPresenter.View
                 mSettingDialogSpeedUnitSpinner.setSelection(2);
             }
         }
+    }
+
+    @Override
+    public void changeOrientation(String orientation) {
+        // FIXME: 17/05/2016
     }
 
     @Override

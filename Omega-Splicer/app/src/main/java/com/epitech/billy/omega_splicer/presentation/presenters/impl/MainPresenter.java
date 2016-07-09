@@ -10,7 +10,7 @@ import com.epitech.billy.omega_splicer.presentation.presenters.IMainPresenter;
  * <p/>
  * This is the presenter for the main view, his main purpose his to redirect the user to the other view.
  */
-public class MainPresenter extends AbstractPresenter implements IMainPresenter{
+public class MainPresenter extends AbstractPresenter implements IMainPresenter {
 
     private IMainPresenter.View mMainView;
 
@@ -21,7 +21,6 @@ public class MainPresenter extends AbstractPresenter implements IMainPresenter{
 
     @Override
     public void resume() {
-
     }
 
     @Override

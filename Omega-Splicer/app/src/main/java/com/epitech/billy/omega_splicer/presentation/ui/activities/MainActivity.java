@@ -1,11 +1,15 @@
 package com.epitech.billy.omega_splicer.presentation.ui.activities;
 
+import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.epitech.billy.omega_splicer.App;
 import com.epitech.billy.omega_splicer.R;
 import com.epitech.billy.omega_splicer.domain.executors.impl.ThreadExecutor;
 import com.epitech.billy.omega_splicer.presentation.presenters.IMainPresenter;
@@ -30,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements IMainPresenter.Vi
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation((App.getInstance().getGeneralOrientation().equals(getString(R.string.landscape_orientation_shared_preference))) ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE : ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -50,6 +55,13 @@ public class MainActivity extends AppCompatActivity implements IMainPresenter.Vi
         if (mSettingButton != null) {
             setupSettingButton();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setRequestedOrientation((App.getInstance().getGeneralOrientation().equals(getString(R.string.landscape_orientation_shared_preference))) ? ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE : ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        mMainPresenter.resume();
     }
 
     @Override
