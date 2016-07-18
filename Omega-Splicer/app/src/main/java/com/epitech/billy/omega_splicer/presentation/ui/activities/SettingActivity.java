@@ -3,6 +3,8 @@ package com.epitech.billy.omega_splicer.presentation.ui.activities;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
@@ -53,6 +55,13 @@ public class SettingActivity extends AppCompatActivity implements ISettingPresen
         setupOrientationRadioGroup();
         setupControlRadioGroup();
         setupSpeedUnitRadioGroup();
+
+        findViewById(R.id.setting_activity_back_cloud).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
     @Override

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.epitech.billy.omega_splicer.App;
@@ -50,6 +51,13 @@ public class PairActivity extends AppCompatActivity implements IPairPresenter.Vi
 
         mPresenter = new PairPresenter(ThreadExecutor.getInstance(), MainThread.getInstance(), this, new BluetoothConnectionManager(this));
         mPresenter.setPairedSubviewPresenter(((PairedDevicesFragment) getSupportFragmentManager().findFragmentById(R.id.paired_devices_fragment)).getPresenter());
+
+        findViewById(R.id.pair_activity_back_cloud).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
     }
 
     @Override
